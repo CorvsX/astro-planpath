@@ -1,3 +1,7 @@
+---
+import MainButton from '../Elements/Main-button.astro';
+---
+
 <header>
     <div class="header-content">
     <div class="logo">
@@ -5,7 +9,7 @@
     </div>
     <div class="info">
         <h2>Planea tus viajes desde nuestra app</h2>
-        <button class="main-button">Comienza a crear tus planes aquí ></button>
+        <MainButton innerText="Comienza a crear tus planes aquí"></MainButton>
     </div>
     </div>
     </header>
@@ -31,21 +35,5 @@
 
     /* .info{  } */
     }
-}
-
-.main-button{
-    font-size: large;
-    background-color: var(--gen-title-color);
-    color: var(--white);
-    padding: 0.5rem 3rem;
-    font-weight: bold;
-    border: 0.15rem solid;
-    border-radius: 0.5rem;
-}
-
-.main-button:hover{
-    color: var(--gen-title-color);
-    background-color: var(--white);
-    cursor: pointer;
 }
 </style>

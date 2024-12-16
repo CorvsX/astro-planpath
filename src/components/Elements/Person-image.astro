@@ -1,0 +1,25 @@
+---
+const { name, srcImg } = Astro.props;
+
+const alt = `Foto de ${name}`;
+---
+
+<div>
+    <p class="names">{name}</p>
+    <img class="admin-photos" src={srcImg}
+    alt={alt} />
+</div>
+
+<style>
+
+.names {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.admin-photos {
+    border-radius: 50%;
+    box-shadow: 0 0 10px #0004;
+    width: 100%;
+}
+</style>
