@@ -1,0 +1,54 @@
+<section id="benefits" class="benefits-content">
+    <div class="short-benefit">
+        <img class="sbenefit-photos"
+    src="https://i2.wp.com/jonaldazabal.com/wp-content/uploads/2017/09/forma-organizativa.jpg?fit=347%2C240"
+    alt="">
+        <p class="short-benefit-text">Organiza tus planes con facilidad y sin estrés.</p>
+    </div>
+    <div class="short-benefit">
+        <img class="sbenefit-photos"
+    src="https://i2.wp.com/jonaldazabal.com/wp-content/uploads/2017/09/forma-organizativa.jpg?fit=347%2C240"
+    alt="">
+        <p class="short-benefit-text">Comparte tus aventuras con amigos o con el mundo.</p>
+    </div>
+    <div class="short-benefit">
+        <img class="sbenefit-photos"
+    src="https://i2.wp.com/jonaldazabal.com/wp-content/uploads/2017/09/forma-organizativa.jpg?fit=347%2C240"
+    alt="">
+        <p class="short-benefit-text">Ahorra tiempo y lleva tus planes siempre contigo.</p>
+    </div>
+</section>
+
+<style>
+    .benefits-content{ /* seccion */
+    width: 100%;
+    margin-top: -100px;
+    background-color: var(--divbgcolor);
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+
+    & .short-benefit {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    & .sbenefit-photos {
+        border-radius: 8px;
+        min-width: 250px;
+        }
+    
+    & .short-benefit-text {
+        max-width: 90%;
+        margin: 0;
+        padding-top: 10px;
+        }
+    }
+}
+</style>
