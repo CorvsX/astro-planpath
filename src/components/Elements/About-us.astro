@@ -1,17 +1,13 @@
 ---
 import PersonImage  from '../Elements/Person-image.astro';
+import persons from '../../data/persons.json';
 ---
 
 <section id="about-us" class="about-us">
     <div class="about-transparent">
         <h2 class="about-text">Sobre nosotros</h2>
         <div class="admin-info-container">
-
-            <PersonImage name="Alejandro" srcImg="https://www.alba-consult.com/wp-content/uploads/2022/10/v3_0151674.jpg" />
-            <PersonImage name="Karina" srcImg="https://www.alba-consult.com/wp-content/uploads/2022/10/v3_0151674.jpg" />
-            <PersonImage name="Sofia" srcImg="https://www.alba-consult.com/wp-content/uploads/2022/10/v3_0151674.jpg" />
-            <PersonImage name="Jonathan" srcImg="https://www.alba-consult.com/wp-content/uploads/2022/10/v3_0151674.jpg" />
-            
+            { persons.map(person => (<PersonImage name={person.name} srcImg={person.src} />) ) }
         </div>
         <div class="text-container">
             <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi eos deleniti aliquid tenetur quod
