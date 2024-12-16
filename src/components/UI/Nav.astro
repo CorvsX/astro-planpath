@@ -1,0 +1,70 @@
+<div class="nav-bar">
+    <img src="/img/isotipo-bg-plan-path.svg" alt="Isotipo PlanPath">
+    <nav>
+    <ul>
+        <li><a href="#benefits" class="nav-button">Inicio</a></li>
+        <li><a href="#about-app" class="nav-button">Sobre la app</a></li>
+        <li><a href="#about-us" class="nav-button">Nosotros</a></li>
+        <li><a href="#" class="nav-button nav-main-button">¡Planifica ya!</a></li>
+    </ul>
+    </nav>
+    </div>
+
+    <style>
+        .nav-bar{
+    position: sticky;
+    background-color: var(--bg-nav-bar);
+    color: var(--gen-title-color);
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    top: 0;
+    opacity: 95%;
+    z-index: 1;
+    border-bottom: 0.2rem solid;
+
+    nav{
+    padding: 0.8rem;
+
+    ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1.4rem;
+    }
+
+    .nav-button{
+    color: var(--gen-title-color);
+    padding: 1rem;
+    border: 0.15rem solid var(--bg-nav-bar);
+    text-decoration: none;
+    border-radius: 0.5rem;
+
+    &.nav-main-button{
+        background-color: var(--gen-title-color);
+        color: var(--white);
+        border: 0.15rem solid var(--gen-title-color);
+    }
+    }
+
+    .nav-button:hover{
+    background-color: var(--gen-title-color);
+    color: var(--white);
+    border: 0.15rem solid var(--gen-title-color);
+    border-radius: 0.5rem ;
+
+    &.nav-main-button{
+        background-color: var(--div-letter-color);
+        color: var(--gen-title-color);
+        border: 0.15rem solid var(--gen-title-color);
+        border-radius: 0.5rem ;
+    }
+    }
+    }
+}
+    </style>
