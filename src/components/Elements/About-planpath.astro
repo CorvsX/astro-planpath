@@ -1,46 +1,33 @@
-<section id="about-app" class="about-planpath">
-    <h2 class="about-title">Sobre Plan Path</h2>
-    <p>Tu diario de texto</p>
+<div id="about-app" class="about-planpath">
+    <h2 class="about-title">¿Qué es PlanPath?</h2>
+    <p>La forma más fácil y divertida de planificar tus viajes y actividades</p>
     <div class="transparent-container">
         <div class="planpath-content">
-            <img class="pp-content-photos"
-            src="https://i2.wp.com/jonaldazabal.com/wp-content/uploads/2017/09/forma-organizativa.jpg?fit=347%2C240"
-            alt="">
+            <img class="pp-content-photos" src="/img/39.1.webp" alt="">
             <div class="text-content">
-                <p>Convierte tus ideas en itinerarios organizados de manera rápida y sencilla. Nuestra
-                    plataforma te permite agregar actividades, lugares, horarios y detalles clave para que no tengas que
-                    preocuparte por olvidar algo importante. Ya sea un viaje soñado, una escapada de fin de semana o un simple
-                    plan en tu ciudad, todo estará en un solo lugar.</p>
-                <p>Nuestra plataforma te permite agregar actividades, lugares, horarios y detalles clave 
-                    para que no tengas que preocuparte por olvidar algo importante. Ya sea un viaje soñado, una escapada de fin
-                    de semana o un simple plan en tu ciudad, todo estará en un solo lugar.</p>
+            <p>Convierte tus ideas en itinerarios organizados con facilidad. PlanPath te permite agregar actividades,
+                lugares, horarios y detalles clave, todo en un solo lugar. Así, no tendrás que preocuparte por olvidar
+                ningún detalle importante. Ya sea un viaje internacional, una escapada de fin de semana o un plan local,
+                PlanPath te ayuda a organizarlo todo.</p>
             </div>
         </div>
         <div class="planpath-content invert">
-            <img class="inv-pp-content-photos"
-            src="https://i2.wp.com/jonaldazabal.com/wp-content/uploads/2017/09/forma-organizativa.jpg?fit=347%2C240"
-            alt="">
-            <div class="inv-text-content">
-                <p>Haz que organizar planes sea una experiencia colaborativa, comparte tus itinerarios con amigos. También
-                    puedes inspirar a otros usuarios compartiendo tus planes públicamente, como si fuera un diario o un
-                    tablero de inspiración lleno de tus mejores momentos.</p>
-                <p>También puedes inspirar a otros usuarios compartiendo tus planes públicamente, como si fuera un diario o
-                    un tablero de inspiración lleno de tus mejores momentos.</p>
+            <img class="inv-pp-content-photos pp-content-photos" src="/img/43.webp" alt="">
+            <div class="inv-text-content text-content">
+            <p>Haz de la planificación una experiencia colaborativa. Comparte tus itinerarios con amigos o inspíralos
+                a través de tus planes públicos, como un diario de viajes o un tablero de inspiración con tus mejores
+                momentos.</p>
             </div>
         </div>
-        <div class="planpath-content ">
-            <img class="pp-content-photos"
-            src="https://i2.wp.com/jonaldazabal.com/wp-content/uploads/2017/09/forma-organizativa.jpg?fit=347%2C240"
-            alt="">
-            <div class="text-content">
-                <p>Olvídate de crear interminables listas y documentos. Con nuestra plataforma, tienes
-                    todo lo necesario para planificar y acceder a tus ideas desde cualquier dispositivo. Ya sea desde tu móvil
-                    mientras estás en movimiento o desde tu PC mientras lo preparas, tu diario de planes está siempre a mano,
-                    listo para ayudarte a vivir al máximo.</p>
-            </div>
+        <div class="planpath-content">
+            <img class="pp-content-photos" src="/img/21.webp" alt="">
+            <p class="text-content">Olvídate de las listas interminables. Con PlanPath, podrás planificar y acceder a
+            todos tus itinerarios desde cualquier dispositivo. Ya sea desde tu móvil mientras te desplazas o desde tu
+            PC mientras lo organizas, siempre tendrás acceso a tu diario de planes, ¡listo para ayudarte a disfrutar
+            al máximo!</p>
         </div>
     </div>
-</section>
+</div>
 
 <style>
     
@@ -52,70 +39,61 @@
     align-items: center;
     margin: 5rem 0;
 
-    & .about-title {
-        color: var(--gen-title-color);
-        font-size: var(--title-font-size);
-        font-family: merienda, sans-serif;
-    }
-
     & .transparent-container {
         display: flex;
         flex-direction: column;
-        text-align: center;
         color: var(--gen-letter-color);
         gap: 1rem;
     }
+}
+
+.about-title {
+    color: var(--gen-title-color);
+    font-size: var(--title-font-size);
+    font-family: merienda, sans-serif;
+    font-weight: 700;
+    letter-spacing: -2px;
+    text-align: center;
 }
 
 .planpath-content{
     display: flex;
     flex-direction: row;
     gap: 1rem;
+
     & .pp-content-photos {
         border-radius: 5px 30px 30px 5px;
-        max-width: 30%;
-        min-width: 20%;
-        height: 15rem;
+        height: auto; 
+        width: auto; 
+        max-width: 300px; 
+        max-height: 300px;
     }
 
     & .text-content{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         height: 15rem;
         box-sizing: border-box;
-        text-align: start;
         background-color: var(--divbgcolor);
         border-top-left-radius: 30px;
         border-bottom-left-radius: 30px;
         padding: 20px;
         box-shadow: 0 0 10px #0004;
+        margin: 0;
+        line-height: 1.5rem;
     }
-    }
+}
 
 .invert {
-    height: 15rem;
     flex-direction: row-reverse;
 
     & .inv-text-content {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        box-sizing: border-box;
-        text-align: start;
-        background-color: var(--divbgcolor);
-        border-top-right-radius: 30px;
-        border-bottom-right-radius: 30px;
-        padding: 20px;
-        box-shadow: 0 0 10px #0004;
-    }
+        border-radius: 0 30px 30px 0;
+    } 
 
     & .inv-pp-content-photos {
         border-radius: 30px 5px 5px 30px;
-        max-width: 30%;
-        min-width: 20%;
-    }
-}
+    } 
+} 
 </style>

@@ -3,77 +3,52 @@ import PersonImage  from '../Elements/Person-image.astro';
 import persons from '../../data/persons.json';
 ---
 
-<section id="about-us" class="about-us">
-    <div class="about-transparent">
-        <h2 class="about-text">Sobre nosotros</h2>
-        <div class="admin-info-container">
-            { persons.map(person => (<PersonImage name={person.name} srcImg={person.src} />) ) }
-        </div>
-        <div class="text-container">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Modi eos deleniti aliquid tenetur quod
-            fugiat
-            nobis, provident illum? Animi officia quibusdam dolorum facere rerum molestiae voluptas pariatur cum
-            provident recusandae! Lorem ipsum dolor sit amet consectetur adipisicing elit. Error repudiandae
-            architecto
-            iure. Ab nulla atque sequi? Repudiandae, hic ea tempore iusto deleniti voluptas, amet deserunt culpa
-            blanditiis rem nesciunt explicabo! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta,
-            quo.
-            Mollitia facilis non commodi eaque. Doloremque asperiores sint possimus ab distinctio! Inventore nobis
-            facere quae ab laborum ea eveniet ipsum?</p>
-        </div>
+<div id="about-us" class="about-us">
+    <h2 class="about-title">Conoce al equipo</h2>
+    <div class="admin-info-container">
+        { persons.map(person => (<PersonImage name={person.name} slogan={person.slogan} srcImg={person.src} />) ) }
     </div>
-</section>
+    <div class="text-container">
+        <p>Somos un equipo de estudiantes y profesionales que se formaron en el curso de <a
+            href="https://www.eoi.es/es/cursos/92487/conecta-empleoxeoi-programacion-y-diseno-web-frontend-gran-canaria">Programación
+            y Diseño Web
+            Front-End</a> de la <a href="https://www.eoi.es/es">Escuela de Organización Industrial (EOI)</a>. Este
+            proyecto nació de nuestra pasión por la tecnología, la organización y el deseo de hacer más fácil y
+            entretenida la experiencia de planificar viajes.
+        </p>
+    </div>
+</div>
 
 <style>
-.about-us{
+.about-us {
     width: 100%;
     border-radius: var(--border-radius);
     box-sizing: border-box;
     padding: 25px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.about-transparent {
-    width: 100%;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 
-    & .about-text {
-        text-align: center;
-        color: var(--gen-title-color);
-        font-size: var(--title-font-size);
-        font-family: merienda, sans-serif;
-        padding: 10px;
-    }
-
     & .admin-info-container {
         width: 100%;
         display: flex;
-        flex-direction: row;
+        flex-wrap: wrap;
         justify-content: space-around;
         align-items: center;
         margin-bottom: 2rem;
-    
-        & .names {
-        text-align: center;
-        margin-bottom: 10px;
-        }
-    
-        & .admin-photos {
-        border-radius: 50%;
-        box-shadow: 0 0 10px #0004;
-        width: 100%;
-        }
+        gap: 20px;
     }
+}
 
-    & .text-container {
-        color: black;
-        width: 50%;
+    .text-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(0 0 0);
+    width: 50%;
+
+    p {
         text-align: center;
     }
 }

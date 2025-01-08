@@ -1,18 +1,22 @@
 [
     {
         "name": "Alejandro",
+        "slogan": "Texto de prueba",
         "src": "https://www.alba-consult.com/wp-content/uploads/2022/10/v3_0151674.jpg"
     },
     {
         "name": "Karina",
-        "src": "https://www.alba-consult.com/wp-content/uploads/2022/10/v3_0151674.jpg"
+        "slogan": "Texto de prueba",
+        "src": "/img/57.webp"
     },
     {
         "name": "Sofia",
+        "slogan": "Texto de prueba",
         "src": "https://www.alba-consult.com/wp-content/uploads/2022/10/v3_0151674.jpg"
     },
     {
         "name": "Jonathan",
+        "slogan": "Texto de prueba",
         "src": "https://www.alba-consult.com/wp-content/uploads/2022/10/v3_0151674.jpg"
     }
 ]

@@ -2,21 +2,19 @@
 import MainButton from '../Elements/Main-button.astro';
 ---
 
-<section class="cta-container">
-    <div class="cta-container-transparent">
-        <div class="cta-title">
-            <p>¿EMPEZAMOS TU DIARIO DE PLANES?</p>
-        </div>
-        <div class="cta-part">
-            <div class="cta-subtitle">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus quos, saepe libero facere nesciunt
-                temporibus doloremque magni expedita enim dolores perferendis reiciendis illum deserunt asperiores,
-                dignissimos aut dolore incidunt itaque!</p>
-            </div>
-            <MainButton innerText="Empieza ahora"></MainButton>
-        </div>
+<div class="cta-container">
+    <div class="cta-title">
+        <p>¿Listo para empezar a planificar tu próximo viaje?</p>
     </div>
-</section>
+    <div class="cta-part">
+        <div class="cta-subtitle">
+            <p>PlanPath hace que planificar sea tan divertido como viajar. Organiza tus itinerarios, comparte tus planes
+            y vive la experiencia de viajar desde el primer momento.</p>
+        </div>
+        <MainButton innerText="Comienza ahora"></MainButton>    
+    </div>
+</div>
+
 
 <style>
 .cta-container {
@@ -24,9 +22,6 @@ import MainButton from '../Elements/Main-button.astro';
     border-radius: var(--border-radius);
     margin-bottom: 50px;
     margin-top: 50px;
-}
-
-.cta-container-transparent {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -46,12 +41,12 @@ import MainButton from '../Elements/Main-button.astro';
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    
+
         & .cta-subtitle{
         color: black;
         width: 80%;
         }
-    
+
         & .cta-button{
         background-color: var(--gen-title-color);
         color: #fff;
@@ -59,19 +54,23 @@ import MainButton from '../Elements/Main-button.astro';
     }
 }
 
-.main-button{
-    font-size: large;
-    background-color: var(--gen-title-color);
-    color: var(--white);
-    padding: 0.5rem 3rem;
-    font-weight: bold;
-    border: 0.15rem solid;
-    border-radius: 0.5rem;
-}
+@media (width <= 800px) {
+.cta-container {
+    display: flex;
+    flex-direction: column;
 
-.main-button:hover{
-    color: var(--gen-title-color);
-    background-color: var(--white);
-    cursor: pointer;
+        & .cta-title {
+        width: 100%;
+        font-size: 2rem;
+        }
+    
+        & .cta-part{
+        width: 100%;
+        
+        & .cta-subtitle{
+            display: none;
+        }
+        }
+    }
 }
 </style>
