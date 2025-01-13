@@ -1,33 +1,32 @@
+---
+import PlanPathContent from "./PlanPath-content.astro"
+import contents from '../../data/content-data.json';        
+---
+
 <div id="about-app" class="about-planpath">
+
     <h2 class="about-title">¿Qué es PlanPath?</h2>
+
     <p>La forma más fácil y divertida de planificar tus viajes y actividades</p>
+    
     <div class="transparent-container">
-        <div class="planpath-content">
-            <img class="pp-content-photos" src="/img/39.1.webp" alt="">
-            <div class="text-content">
-            <p>Convierte tus ideas en itinerarios organizados con facilidad. PlanPath te permite agregar actividades,
-                lugares, horarios y detalles clave, todo en un solo lugar. Así, no tendrás que preocuparte por olvidar
-                ningún detalle importante. Ya sea un viaje internacional, una escapada de fin de semana o un plan local,
-                PlanPath te ayuda a organizarlo todo.</p>
-            </div>
-        </div>
-        <div class="planpath-content invert">
-            <img class="inv-pp-content-photos pp-content-photos" src="/img/43.webp" alt="">
-            <div class="inv-text-content text-content">
-            <p>Haz de la planificación una experiencia colaborativa. Comparte tus itinerarios con amigos o inspíralos
-                a través de tus planes públicos, como un diario de viajes o un tablero de inspiración con tus mejores
-                momentos.</p>
-            </div>
-        </div>
-        <div class="planpath-content">
-            <img class="pp-content-photos" src="/img/21.webp" alt="">
-            <p class="text-content">Olvídate de las listas interminables. Con PlanPath, podrás planificar y acceder a
-            todos tus itinerarios desde cualquier dispositivo. Ya sea desde tu móvil mientras te desplazas o desde tu
-            PC mientras lo organizas, siempre tendrás acceso a tu diario de planes, ¡listo para ayudarte a disfrutar
-            al máximo!</p>
-        </div>
+        { contents.map(content => (<PlanPathContent text={content.text} srcImg={content.srcImg} altImg={content.altImg} />) ) }
     </div>
 </div>
+
+<style is:global>
+    .about-planpath .transparent-container :nth-child(2n) {
+
+        & .pp-content-photos {
+            border-radius: 30px 5px 5px 30px;
+        }
+
+        & .text-content {
+                order: -1; 
+                border-radius: 0 30px 30px 0;
+            }
+    }
+</style>
 
 <style>
     
@@ -55,73 +54,10 @@
     letter-spacing: -2px;
     text-align: center;
 }
-
-.planpath-content{
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-
-    & .pp-content-photos {
-        border-radius: 5px 30px 30px 5px;
-        height: auto; 
-        width: auto; 
-        max-width: 300px; 
-        max-height: 300px;
-    }
-
-    & .text-content{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 15rem;
-        box-sizing: border-box;
-        background-color: var(--divbgcolor);
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
-        padding: 20px;
-        box-shadow: 0 0 10px #0004;
-        margin: 0;
-        line-height: 1.5rem;
-    }
-}
-
-.invert {
-    flex-direction: row-reverse;
-
-    & .inv-text-content {
-        border-radius: 0 30px 30px 0;
-    } 
-
-    & .inv-pp-content-photos {
-        border-radius: 30px 5px 5px 30px;
-    } 
-} 
-
 @media (width <= 800px) {
-
     .transparent-container {
         padding: 25px;
     }
-
-    .planpath-content{
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-
-        & .pp-content-photos {
-        max-width: 400px; 
-        max-height: 400px;
-        border-radius: 30px 30px 0 0;
-        box-shadow: 0 0 10px #0004;
-        }
-
-        & .text-content{
-        max-width: 400px; 
-        max-height: 400px;
-        font-size: 14px;
-        border-radius: 0 0 30px 30px;
-        }
-    }
 }
 
-</style>
+</>

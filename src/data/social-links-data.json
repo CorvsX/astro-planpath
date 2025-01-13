@@ -1,0 +1,17 @@
+[
+    {
+        "url": "#",
+        "name": "linkedin",
+        "colorAccent" : "#0077b5"
+    },
+    {
+        "url": "https://x.com/PathPlan_",
+        "name": "twitter",
+        "colorAccent" : "black"
+    },
+    {
+        "url": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+        "name": "youtube",
+        "colorAccent" : "#f00"
+    }
+]

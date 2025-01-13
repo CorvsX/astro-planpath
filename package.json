@@ -9,7 +9,8 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.0.7"
+    "astro": "^5.0.7",
+    "astro-icon": "^1.1.5"
   },
   "devDependencies": {
     "eslint": "^9.17.0",
