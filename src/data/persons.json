@@ -2,16 +2,19 @@
     {
         "name": "Alejandro",
         "slogan": "Hola",
-        "src": "/img/59.webp"
+        "src": "/img/59.webp",
+        "url": "https://www.linkedin.com/in/corvs/"
     },
     {
         "name": "Karina",
         "slogan": "Es solo un idioma más",
-        "src": "/img/57.webp"
+        "src": "/img/57.webp",
+        "url": "https://www.linkedin.com/in/karina-mujica-perera-66a024164/"
     },
     {
         "name": "Jonathan",
         "slogan": "Texto de prueba",
-        "src": "/img/58.webp"
+        "src": "/img/58.webp",
+        "url": "https://www.linkedin.com/in/jonathan-betancor-perdomo/"
     }
 ]

@@ -6,7 +6,7 @@ import persons from '../../data/persons.json';
 <div id="about-us" class="about-us">
     <h2 class="about-title">Conoce al equipo</h2>
     <div class="admin-info-container">
-        { persons.map(person => (<PersonImage name={person.name} slogan={person.slogan} srcImg={person.src} />) ) }
+        { persons.map(person => (<PersonImage name={person.name} slogan={person.slogan} srcImg={person.src} url={person.url}/>) ) }
     </div>
     <div class="text-container">
         <p>Somos un equipo de estudiantes y profesionales que se formaron en el curso de <a
