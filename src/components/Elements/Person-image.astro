@@ -1,14 +1,16 @@
 ---
-const { name, slogan, srcImg } = Astro.props;
+const { name, slogan, srcImg, url } = Astro.props;
 const alt = `Foto de ${name}`;
 ---
 
 <div class="admin-card">
-    <img class="admin-photos" src={srcImg} alt={alt} />
-    <div class="admin-overlay">
-        <p class="admin-name">{name}</p>
-        <p class="admin-slogan">{slogan}</p>
-    </div>
+    <a href={url} target="_blank">
+        <img class="admin-photos" src={srcImg} alt={alt} />
+        <div class="admin-overlay">
+            <p class="admin-name">{name}</p>
+            <p class="admin-slogan">{slogan}</p>
+        </div>
+    </a>
 </div>
 
 <style>
@@ -22,16 +24,15 @@ const alt = `Foto de ${name}`;
     transition: box-shadow 0.5s ease, transform 0.5s ease;
     cursor: pointer;
 }
-.admin-card:hover {
-    transform: scale(1.2);
-    box-shadow: 0 20px 40px rgb(0 0 0 / 50%);
-}
+
 .admin-photos {
     width: 100%;
-    height: 100%;
+    height: 100%;   
     object-fit: cover;
-    transition: filter 0.7s ease, transform 0.7s ease;
+    border-radius: 50%;
+    transition: filter 0.5s ease, transform 0.5s ease;
 }
+
 .admin-card:hover .admin-photos {
     filter: grayscale(0) brightness(1.2);
     transform: scale(1.1);
@@ -49,59 +50,21 @@ const alt = `Foto de ${name}`;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 0%;
+    opacity: 1%;
     transition: opacity 0.5s ease, top 0.5s ease, transform 0.7s ease;
     border-radius: 50%;
+
+    .admin-name {
+        font-size: 1.5rem;
+    }
+    .admin-slogan {
+        font-size: 0.9rem;
+    }
 }
 
 .admin-card:hover .admin-overlay {
     opacity: 100%;
     top: 0;
     transform: scale(1.1);
-}
-.admin-name {
-    font-size: 1.5rem;
-    font-weight: bold;
-    animation: popin 0.6s ease-out;
-    transition: all 0.3s ease-in-out;
-}
-.admin-slogan {
-    font-size: 1rem;
-    margin-top: 10px;
-    animation: slideupfade 0.6s ease-out 0.2s;
-    transition: all 0.3s ease-in-out;
-}
-
-
-    
-@keyframes popin {
-    0% {
-    transform: scale(0.8);
-    opacity: 0%;
-    }
-
-    100% {
-    transform: scale(1);
-    opacity: 100%;
-    }
-}
-    
-@keyframes slideupfade {
-    0% {
-    transform: translateY(20px);
-    opacity: 0%;
-    }
-
-    100% {
-    transform: translateY(0);
-    opacity: 100%;
-    }
-}
-
-@media (width <= 480px) {
-    .admin-card {
-        width: 150px;
-        height: 150px;
-    }
 }
 </style>

@@ -6,7 +6,7 @@ import persons from '../../data/persons.json';
 <div id="about-us" class="about-us">
     <h2 class="about-title">Conoce al equipo</h2>
     <div class="admin-info-container">
-        { persons.map(person => (<PersonImage name={person.name} slogan={person.slogan} srcImg={person.src} />) ) }
+        { persons.map(person => (<PersonImage name={person.name} slogan={person.slogan} srcImg={person.src} url={person.url}/>) ) }
     </div>
     <div class="text-container">
         <p>Somos un equipo de estudiantes y profesionales que se formaron en el curso de <a
@@ -50,6 +50,16 @@ import persons from '../../data/persons.json';
 
     p {
         text-align: center;
+        a {
+            color: var(--gen-title-color);
+            text-decoration: none;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
+        }
+    
+        a:hover {
+            color: black;
+            text-shadow: 0 0 5px rgb(0 0 0 / 30%);
+        }
     }
 }
     
