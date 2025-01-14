@@ -1,55 +1,56 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-	<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="description"
-		content="PlanPath es una aplicación web que te ayuda a planificar tu próximo plan en tu ciudad o tu futuro viaje.">
-	<link rel="icon" href="/img/isotipo-bg-plan-path.svg" type="image/x-icon" />
-	<title>PlanPath</title>
-
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PlanPath es una aplicación web que te ayuda a planificar tu próximo plan en tu ciudad o tu futuro viaje."
+    />
+    <link rel="icon" href="/img/isotipo-bg-plan-path.svg" type="image/x-icon" />
+    <title>PlanPath</title>
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
 
 <style>
-@font-face {
-  font-family: merienda;
-  src: 
-    url("fonts/merienda-vf.woff2") format("woff2"),
-    url("fonts/merienda-vf.woff") format("woff"),
-    url("fonts/merienda-vf.ttf") format("truetype");
-}
+  @font-face {
+    font-family: merienda;
+    src:
+      url("fonts/merienda-vf.woff2") format("woff2"),
+      url("fonts/merienda-vf.woff") format("woff"),
+      url("fonts/merienda-vf.ttf") format("truetype");
+  }
 
-:root{
-  --divbgcolor: #bdaf95;
-  --pagebgcolor: #f2f7fb;
-  --gen-letter-color: #000;
-  --gen-title-color: #0b64ad;
-  --white: #fff;
-  --border-radius: 0.75rem;
-  --gen-font-family: roboto, sans-serif;
-  --bg-nav-bar: #f2f7fb;
-  --svg-size: 25px;
-  --title-font-size: 3rem;
-  --text-font-size: 1.2rem;
-}
+  :root {
+    --divbgcolor: #bdaf95;
+    --pagebgcolor: #f2f7fb;
+    --gen-letter-color: #000;
+    --gen-title-color: #0b64ad;
+    --white: #fff;
+    --border-radius: 0.75rem;
+    --gen-font-family: roboto, sans-serif;
+    --bg-nav-bar: #f2f7fb;
+    --svg-size: 25px;
+    --title-font-size: 3rem;
+    --text-font-size: 1.2rem;
+  }
 
-html {
-  scroll-behavior: smooth;
-}
+  html {
+    scroll-behavior: smooth;
+  }
 
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: var(--gen-font-family);
-  background-color: var(--pagebgcolor);
-  color: var(--gen-letter-colorcolor);
-  font-weight: 400;
-  font-size: var(--text-font-size);
-}
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--gen-font-family);
+    background-color: var(--pagebgcolor);
+    color: var(--gen-letter-colorcolor);
+    font-weight: 400;
+    font-size: var(--text-font-size);
+  }
 </style>

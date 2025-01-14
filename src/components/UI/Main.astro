@@ -1,20 +1,20 @@
 ---
-import AboutPlanPath from '../Elements/About-planpath.astro';
-import AboutUs from '../Elements/About-us.astro';
-import Cta from '../Elements/Cta.astro';
-import ShortBenefits from '../Elements/List-short-benefits.astro';
+import AboutPlanPath from "../Elements/About-planpath.astro";
+import AboutUs from "../Elements/About-us.astro";
+import Cta from "../Elements/Cta.astro";
+import ShortBenefits from "../Elements/List-short-benefits.astro";
 ---
 
 <main class="content-container">
+  <ShortBenefits />
+  <AboutPlanPath />
+  <AboutUs />
+  <Cta />
 
-    <ShortBenefits />
-    <AboutPlanPath />
-    <AboutUs />
-    <Cta />
-
-<style>
-.content-container {
-    margin: auto;
-    max-width: 80rem;
-}
-</style>
+  <style>
+    .content-container {
+      margin: auto;
+      max-width: 80rem;
+    }
+  </style>
+</main>

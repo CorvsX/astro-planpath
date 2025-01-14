@@ -1,24 +1,23 @@
 ---
 const { innerText } = Astro.props;
 ---
+
 <button class="main-button">{innerText}</button>
 
 <style>
-.main-button{
+  .main-button {
     font-size: large;
     background-color: var(--gen-title-color);
     color: var(--white);
     padding: 0.5rem 3rem;
     font-weight: bold;
     border: 0.15rem solid;
-    border-radius: var(--border-radius)
-}
+    border-radius: var(--border-radius);
+  }
 
-.main-button:hover{
+  .main-button:hover {
     color: var(--gen-title-color);
     background-color: var(--white);
     cursor: pointer;
-}
-
+  }
 </style>
-

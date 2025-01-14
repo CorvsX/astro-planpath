@@ -4,67 +4,78 @@ const alt = `Foto de ${name}`;
 ---
 
 <div class="admin-card">
-    <a href={url} target="_blank">
-        <img class="admin-photos" src={srcImg} alt={alt} />
-        <div class="admin-overlay">
-            <p class="admin-name">{name}</p>
-            <p class="admin-slogan">{slogan}</p>
-        </div>
-    </a>
+  <a href={url} target="_blank">
+    <img class="admin-photos" src={srcImg} alt={alt} />
+    <div class="admin-overlay">
+      <p class="admin-name">{name}</p>
+      <p class="admin-slogan">{slogan}</p>
+    </div>
+  </a>
 </div>
 
 <style>
-.admin-card {
+  .admin-card {
     position: relative;
     width: 220px;
     height: 220px;
     overflow: hidden;
     border-radius: 50%;
     margin: 10px;
-    transition: box-shadow 0.5s ease, transform 0.5s ease;
+    transition:
+      box-shadow 0.5s ease,
+      transform 0.5s ease;
     cursor: pointer;
-}
+  }
 
-.admin-photos {
+  .admin-photos {
     width: 100%;
-    height: 100%;   
+    height: 100%;
     object-fit: cover;
     border-radius: 50%;
-    transition: filter 0.5s ease, transform 0.5s ease;
-}
+    transition:
+      filter 0.5s ease,
+      transform 0.5s ease;
+  }
 
-.admin-card:hover .admin-photos {
+  .admin-card:hover .admin-photos {
     filter: grayscale(0) brightness(1.2);
     transform: scale(1.1);
-}
+  }
 
-.admin-overlay {
+  .admin-overlay {
     position: absolute;
     top: 100%;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(180deg, rgb(0 0 0 / 0%) 0%, rgb(0 0 0 / 75%) 100%);
+    background: linear-gradient(
+      180deg,
+      rgb(0 0 0 / 0%) 0%,
+      rgb(0 0 0 / 75%) 100%
+    );
     color: white;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     opacity: 1%;
-    transition: opacity 0.5s ease, top 0.5s ease, transform 0.7s ease;
+    transition:
+      opacity 0.5s ease,
+      top 0.5s ease,
+      transform 0.7s ease;
     border-radius: 50%;
 
     .admin-name {
-        font-size: 1.5rem;
+      font-size: 1.5rem;
     }
     .admin-slogan {
-        font-size: 0.9rem;
+      font-size: 0.9rem;
     }
-}
+  }
 
-.admin-card:hover .admin-overlay {
+  .admin-card:hover .admin-overlay {
     opacity: 100%;
     top: 0;
     transform: scale(1.1);
-}
+  }
 </style>

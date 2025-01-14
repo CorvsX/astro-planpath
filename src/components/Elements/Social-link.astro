@@ -1,26 +1,28 @@
 ---
-import { Icon } from 'astro-icon/components'
+import { Icon } from "astro-icon/components";
 
 const { url, name, colorAccent } = Astro.props;
 const arialabel = `Visítanos en ${name}`;
 ---
 
 <a href={url} target="_blank" aria-label={arialabel}>
-    <Icon name={name}/>
+  <Icon name={name} />
 </a>
 
-<style is:global define:vars={{colorAccent}}>
-    .footer-social {
-        a {
-            font-size: var(--svg-size);
-            color: var(--gen-letter-color);
-            text-decoration: none;
-        }
-
-        a:hover {
-            transform: scale(1.2) rotate(10deg);
-            transition: transform 0.3s ease, fill 0.3s ease;
-            color: var(--colorAccent);
-        }
+<style is:global define:vars={{ colorAccent }}>
+  .footer-social {
+    a {
+      font-size: var(--svg-size);
+      color: var(--gen-letter-color);
+      text-decoration: none;
     }
+
+    a:hover {
+      transform: scale(1.2) rotate(10deg);
+      transition:
+        transform 0.3s ease,
+        fill 0.3s ease;
+      color: var(--colorAccent);
+    }
+  }
 </style>

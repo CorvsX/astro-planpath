@@ -3,74 +3,73 @@ const { text, srcImg, altImg } = Astro.props;
 ---
 
 <div class="planpath-content">
-    <img class="pp-content-photos" src={srcImg} alt={altImg}>
-    <div class="text-content">
-        <p>{text}</p>
-    </div>
+  <img class="pp-content-photos" src={srcImg} alt={altImg} />
+  <div class="text-content">
+    <p>{text}</p>
+  </div>
 </div>
 
-
 <style>
-.planpath-content{
+  .planpath-content {
     display: flex;
     flex-direction: row;
     gap: 1rem;
 
     & .pp-content-photos {
-        border-radius: 4px 12px 12px 5px;
-        height: auto; 
-        width: auto; 
-        max-width: 300px; 
-        max-height: 300px;
+      border-radius: 4px 12px 12px 5px;
+      height: auto;
+      width: auto;
+      max-width: 300px;
+      max-height: 300px;
     }
 
-    & .text-content{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 15rem;
-        box-sizing: border-box;
-        background-color: var(--divbgcolor);
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
-        padding: 20px;
-        box-shadow: 0 0 10px #0004;
-        margin: 0;
-        line-height: 1.5rem;
+    & .text-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: 15rem;
+      box-sizing: border-box;
+      background-color: var(--divbgcolor);
+      border-top-left-radius: 30px;
+      border-bottom-left-radius: 30px;
+      padding: 20px;
+      box-shadow: 0 0 10px #0004;
+      margin: 0;
+      line-height: 1.5rem;
     }
-}
+  }
 
-.invert {
+  .invert {
     flex-direction: row-reverse;
 
     & .inv-text-content {
-        border-radius: 0 12px 12px 0;
-    } 
+      border-radius: 0 12px 12px 0;
+    }
 
     & .inv-pp-content-photos {
-        border-radius: 12px 4px 4px 12px;
-    } 
-} 
+      border-radius: 12px 4px 4px 12px;
+    }
+  }
 
-@media (width <= 800px) {
-    .planpath-content{
-        display: flex;
-        flex-direction: column;
-        gap: 0;
+  @media (width <= 800px) {
+    .planpath-content {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
 
-        & .pp-content-photos {
-        max-width: 400px; 
+      & .pp-content-photos {
+        max-width: 400px;
         max-height: 400px;
         border-radius: 12px 12px 0 0;
         box-shadow: 0 0 10px #0004;
-        }
+      }
 
-        & .text-content{
-        max-width: 400px; 
+      & .text-content {
+        max-width: 400px;
         max-height: 400px;
         font-size: 14px;
         border-radius: 0 0 12px 12px;
-        }
+      }
     }
-}
+  }
 </style>

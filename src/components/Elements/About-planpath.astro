@@ -1,36 +1,54 @@
 ---
-import PlanPathContent from "./PlanPath-content.astro"
-import contents from '../../data/content-data.json';        
+import PlanPathContent from "./PlanPath-content.astro";
+import contents from "../../data/content-data.json";
 ---
 
 <div id="about-app" class="about-planpath">
+  <h2 class="about-title">¿Qué es PlanPath?</h2>
 
-    <h2 class="about-title">¿Qué es PlanPath?</h2>
+  <p>La forma más fácil y divertida de planificar tus viajes y actividades</p>
 
-    <p>La forma más fácil y divertida de planificar tus viajes y actividades</p>
-    
-    <div class="transparent-container">
-        { contents.map(content => (<PlanPathContent text={content.text} srcImg={content.srcImg} altImg={content.altImg} />) ) }
-    </div>
+  <div class="transparent-container">
+    {
+      contents.map((content) => (
+        <PlanPathContent
+          text={content.text}
+          srcImg={content.srcImg}
+          altImg={content.altImg}
+        />
+      ))
+    }
+  </div>
 </div>
 
 <style is:global>
-    .about-planpath .transparent-container :nth-child(2n) {
-
-        & .pp-content-photos {
-            border-radius: 12px 4px 4px 12px;
-        }
-
-        & .text-content {
-                order: -1; 
-                border-radius: 0 12px 12px 0;
-            }
+  .about-planpath .transparent-container :nth-child(2n) {
+    & .pp-content-photos {
+      border-radius: 12px 4px 4px 12px;
     }
+
+    & .text-content {
+      order: -1;
+      border-radius: 0 12px 12px 0;
+    }
+  }
+
+  @media (width <= 800px) {
+    .about-planpath .transparent-container :nth-child(2n) {
+      & .pp-content-photos {
+        border-radius: 12px 12px 0 0;
+      }
+
+      & .text-content {
+        order: 1;
+        border-radius: 0 0 12px 12px;
+      }
+    }
+  }
 </style>
 
 <style>
-    
-.about-planpath{
+  .about-planpath {
     width: 100%;
     border-radius: var(--border-radius);
     display: flex;
@@ -39,25 +57,24 @@ import contents from '../../data/content-data.json';
     margin: 5rem 0;
 
     & .transparent-container {
-        display: flex;
-        flex-direction: column;
-        color: var(--gen-letter-color);
-        gap: 1rem;
+      display: flex;
+      flex-direction: column;
+      color: var(--gen-letter-color);
+      gap: 1rem;
     }
-}
+  }
 
-.about-title {
+  .about-title {
     color: var(--gen-title-color);
     font-size: var(--title-font-size);
     font-family: merienda, sans-serif;
     font-weight: 700;
     letter-spacing: -2px;
     text-align: center;
-}
-@media (width <= 800px) {
+  }
+  @media (width <= 800px) {
     .transparent-container {
-        padding: 25px;
+      padding: 25px;
     }
-}
-
-</>
+  }
+</style>

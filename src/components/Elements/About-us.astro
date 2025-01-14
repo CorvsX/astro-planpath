@@ -1,26 +1,39 @@
 ---
-import PersonImage  from '../Elements/Person-image.astro';
-import persons from '../../data/persons.json';
+import PersonImage from "../Elements/Person-image.astro";
+import persons from "../../data/persons.json";
 ---
 
 <div id="about-us" class="about-us">
-    <h2 class="about-title">Conoce al equipo</h2>
-    <div class="admin-info-container">
-        { persons.map(person => (<PersonImage name={person.name} slogan={person.slogan} srcImg={person.src} url={person.url}/>) ) }
-    </div>
-    <div class="text-container">
-        <p>Somos un equipo de estudiantes y profesionales que se formaron en el curso de <a
-            href="https://www.eoi.es/es/cursos/92487/conecta-empleoxeoi-programacion-y-diseno-web-frontend-gran-canaria">Programación
-            y Diseño Web
-            Front-End</a> de la <a href="https://www.eoi.es/es">Escuela de Organización Industrial (EOI)</a>. Este
-            proyecto nació de nuestra pasión por la tecnología, la organización y el deseo de hacer más fácil y
-            entretenida la experiencia de planificar viajes.
-        </p>
-    </div>
+  <h2 class="about-title">Conoce al equipo</h2>
+  <div class="admin-info-container">
+    {
+      persons.map((person) => (
+        <PersonImage
+          name={person.name}
+          slogan={person.slogan}
+          srcImg={person.src}
+          url={person.url}
+        />
+      ))
+    }
+  </div>
+  <div class="text-container">
+    <p>
+      Somos un equipo de estudiantes y profesionales que se formaron en el curso
+      de <a
+        href="https://www.eoi.es/es/cursos/92487/conecta-empleoxeoi-programacion-y-diseno-web-frontend-gran-canaria"
+        >Programación y Diseño Web Front-End</a
+      > de la <a href="https://www.eoi.es/es"
+        >Escuela de Organización Industrial (EOI)</a
+      >. Este proyecto nació de nuestra pasión por la tecnología, la
+      organización y el deseo de hacer más fácil y entretenida la experiencia de
+      planificar viajes.
+    </p>
+  </div>
 </div>
 
 <style>
-.about-us {
+  .about-us {
     width: 100%;
     border-radius: var(--border-radius);
     box-sizing: border-box;
@@ -31,17 +44,17 @@ import persons from '../../data/persons.json';
     align-items: center;
 
     & .admin-info-container {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: center;
-        margin-bottom: 2rem;
-        gap: 20px;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      align-items: center;
+      margin-bottom: 2rem;
+      gap: 20px;
     }
-}
+  }
 
-    .text-container {
+  .text-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,24 +62,25 @@ import persons from '../../data/persons.json';
     width: 50%;
 
     p {
-        text-align: center;
-        a {
-            color: var(--gen-title-color);
-            text-decoration: none;
-            transition: color 0.3s ease, text-shadow 0.3s ease;
-        }
-    
-        a:hover {
-            color: black;
-            text-shadow: 0 0 5px rgb(0 0 0 / 30%);
-        }
-    }
-}
-    
-@media (width <= 480px) {
-    .about-us {
-        padding: 10px;
-    }
-}
+      text-align: center;
+      a {
+        color: var(--gen-title-color);
+        text-decoration: none;
+        transition:
+          color 0.3s ease,
+          text-shadow 0.3s ease;
+      }
 
+      a:hover {
+        color: black;
+        text-shadow: 0 0 5px rgb(0 0 0 / 30%);
+      }
+    }
+  }
+
+  @media (width <= 480px) {
+    .about-us {
+      padding: 10px;
+    }
+  }
 </style>

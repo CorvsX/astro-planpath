@@ -1,14 +1,22 @@
 ---
-import ShortBenefit from "./Short-benefit.astro"
-import benefits from '../../data/benefits-data.json';        
+import ShortBenefit from "./Short-benefit.astro";
+import benefits from "../../data/benefits-data.json";
 ---
 
 <div id="benefits" class="benefits-content">
-    { benefits.map(benefit => (<ShortBenefit text={benefit.text} srcImg={benefit.srcImg} altImg={benefit.altImg} />) ) }
+  {
+    benefits.map((benefit) => (
+      <ShortBenefit
+        text={benefit.text}
+        srcImg={benefit.srcImg}
+        altImg={benefit.altImg}
+      />
+    ))
+  }
 </div>
 
 <style>
-.benefits-content{
+  .benefits-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 25px;
@@ -16,5 +24,5 @@ import benefits from '../../data/benefits-data.json';
     border-radius: var(--border-radius);
     box-sizing: border-box;
     padding: 25px;
-}
+  }
 </style>

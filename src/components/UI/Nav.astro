@@ -1,128 +1,127 @@
 ---
 
 ---
+
 <div class="nav-bar">
-    <img src="/img/isotipo-bg-plan-path.svg" alt="Isotipo PlanPath">
+  <img src="/img/isotipo-bg-plan-path.svg" alt="Isotipo PlanPath" />
 
-    <nav>
-        <ul>
-            <li><a href="#benefits" class="nav-button">Inicio</a></li>
-            <li><a href="#about-app" class="nav-button">Sobre la app</a></li>
-            <li><a href="#about-us" class="nav-button">Nosotros</a></li>
-            <li><a href="#" class="nav-button nav-main-button">¡Planifica ya!</a></li>
-        </ul>
-    </nav>
+  <nav>
+    <ul>
+      <li><a href="#benefits" class="nav-button">Inicio</a></li>
+      <li><a href="#about-app" class="nav-button">Sobre la app</a></li>
+      <li><a href="#about-us" class="nav-button">Nosotros</a></li>
+      <li><a href="#" class="nav-button nav-main-button">¡Planifica ya!</a></li>
+    </ul>
+  </nav>
 
-    <button class="menu-toggle" aria-label="Abrir menú">
-        <img class="menu-svg" src="/img/burger-menu.svg" alt="">
-    </button>
+  <button class="menu-toggle" aria-label="Abrir menú">
+    <img class="menu-svg" src="/img/burger-menu.svg" alt="" />
+  </button>
 </div>
 
 <style>
-    .nav-bar{
-        position: sticky;
+  .nav-bar {
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: var(--bg-nav-bar);
+    color: var(--gen-title-color);
+    width: 100%;
+    text-align: center;
+    align-items: center;
+    top: 0;
+    opacity: 95%;
+    z-index: 1;
+    border-bottom: 0.2rem solid;
+
+    img {
+      margin-left: 4rem;
+    }
+
+    nav {
+      padding: 0.8rem;
+
+      ul {
+        list-style: none;
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
-        background-color: var(--bg-nav-bar);
-        color: var(--gen-title-color);
-        width: 100%;
-        text-align: center;
+        justify-content: space-around;
         align-items: center;
-        top: 0;
-        opacity: 95%;
-        z-index: 1;
-        border-bottom: 0.2rem solid;
-        
-        img{
-            margin-left: 4rem;
-        }
+        gap: 1.4rem;
+      }
 
-            nav{
-                padding: 0.8rem;
-
-            ul{
-                list-style: none;
-                display: flex;
-                flex-direction: row;
-                justify-content: space-around;
-                align-items: center;
-                gap: 1.4rem;
-            }
-
-            .nav-button{
-                color: var(--gen-title-color);
-                padding: 1rem;
-                border: 0.15rem solid var(--bg-nav-bar);
-                text-decoration: none;
-                border-radius: 12px;
-
-                &.nav-main-button{
-                background-color: var(--gen-title-color);
-                color: var(--white);
-                border: 0.15rem solid var(--gen-title-color);
-                }
-                }
-
-                .nav-button:hover{
-                background-color: var(--gen-title-color);
-                color: var(--white);
-                border: 0.15rem solid var(--gen-title-color);
-                border-radius: 12px ;
-
-                &.nav-main-button{
-                background-color: var(--div-letter-color);
-                color: var(--gen-title-color);
-                border: 0.15rem solid var(--gen-title-color);
-                border-radius: 12px ;
-                }
-        }
-    }
-    .menu-svg{
-        width: 3.5rem;
-        fill: var(--gen-title-color);
+      .nav-button {
         color: var(--gen-title-color);
-    }
-}
+        padding: 1rem;
+        border: 0.15rem solid var(--bg-nav-bar);
+        text-decoration: none;
+        border-radius: 12px;
 
-.menu-toggle {
+        &.nav-main-button {
+          background-color: var(--gen-title-color);
+          color: var(--white);
+          border: 0.15rem solid var(--gen-title-color);
+        }
+      }
+
+      .nav-button:hover {
+        background-color: var(--gen-title-color);
+        color: var(--white);
+        border: 0.15rem solid var(--gen-title-color);
+        border-radius: 12px;
+
+        &.nav-main-button {
+          background-color: var(--div-letter-color);
+          color: var(--gen-title-color);
+          border: 0.15rem solid var(--gen-title-color);
+          border-radius: 12px;
+        }
+      }
+    }
+    .menu-svg {
+      width: 3.5rem;
+      fill: var(--gen-title-color);
+      color: var(--gen-title-color);
+    }
+  }
+
+  .menu-toggle {
     display: none;
     font-size: 2rem;
     background: none;
     border: none;
     color: var(--gen-title-color);
     cursor: pointer;
-}
+  }
 
+  @media (width <= 800px) {
+    .nav-bar {
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 1rem;
 
-@media (width <= 800px) {
-.nav-bar {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 1rem;
-
-    .menu-toggle {
-        display: block;     
+      .menu-toggle {
+        display: block;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
+      }
 
-    img,
-    .menu-toggle {
+      img,
+      .menu-toggle {
         margin-left: 4rem;
         margin-right: 2rem;
+      }
 
-    }
-
-    & a {
+      & a {
         color: var(--gen-title-color);
         text-decoration: none;
         font-size: 0.9rem;
         transition: color 0.3s ease;
-    }
+      }
 
-    nav {
+      nav {
         display: none;
         width: 50%;
         flex-direction: column;
@@ -134,49 +133,48 @@
         opacity: 90%;
         border-bottom-left-radius: 2rem;
 
-            ul {
-                flex-direction: column;
-                gap: 1rem;
-                width: 60%;
+        ul {
+          flex-direction: column;
+          gap: 1rem;
+          width: 60%;
 
-            li {
-                width: 100%;
-            }
+          li {
+            width: 100%;
+          }
 
-            a {
-                display: block;
-                width: 100%;
-                text-align: center;
-            }
+          a {
+            display: block;
+            width: 100%;
+            text-align: center;
+          }
         }
+      }
     }
-}
 
     .nav-bar.active nav {
-        display: flex;
+      display: flex;
     }
-}
-
+  }
 </style>
 
 <script>
-function addAllEventListeners() {
+  function addAllEventListeners() {
     const menuToggle = document.querySelector(".menu-toggle");
     const navBar = document.querySelector(".nav-bar");
     const navLinks = document.querySelectorAll(".nav-button");
 
     document.addEventListener("DOMContentLoaded", () => {
-        menuToggle.addEventListener("click", () => {
-            navBar.classList.toggle("active");
-        });
+      menuToggle.addEventListener("click", () => {
+        navBar.classList.toggle("active");
+      });
 
-    navLinks.forEach(link => {
+      navLinks.forEach((link) => {
         link.addEventListener("click", function () {
-        navBar.classList.remove("active");
+          navBar.classList.remove("active");
         });
+      });
     });
-    });
-}
+  }
 
-    addAllEventListeners();
+  addAllEventListeners();
 </script>
