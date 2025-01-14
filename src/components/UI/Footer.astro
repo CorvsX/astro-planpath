@@ -8,7 +8,7 @@ import { Icon } from 'astro-icon/components'
 <footer>
     <div class="footer-container">
         <div class="footer-logo">
-            <span>Plan Path</span>
+            <a href="#">PlanPath</a>
         </div>
 
         <div class="footer-nav">
@@ -49,11 +49,13 @@ footer {
     }
 
     .footer-logo {
-        margin-bottom: 20px;
         font-size: 1.5rem;
         font-weight: bold;
-        text-transform: uppercase;
-        font-family: "Karina media", sans-serif;
+        font-family: merienda, sans-serif;
+
+        a {
+            text-decoration: none;
+        }
     }
 
     .footer-nav {
@@ -61,29 +63,29 @@ footer {
         gap: 15px;
     
         a {
-        color: var(--gen-title-color);
-        text-decoration: none;
-        font-size: 0.9rem;
-        transition: color 0.3s ease, text-shadow 0.3s ease;
+            color: var(--gen-title-color);
+            text-decoration: none;
+            font-size: 16px;
+            transition: color 0.3s ease, text-shadow 0.3s ease;
         }
     
         a:hover {
-        color: black;
-        text-shadow: 0 0 5px rgb(0 0 0 / 30%);
+            color: black;
+            text-shadow: 0 0 5px rgb(0 0 0 / 30%);
         }
     }
 
     .footer-social {
         display: flex;
         gap: 10px;
-        margin-top: 15px;
     }
 
     .footer-bottom {
         text-align: center;
         font-size: 0.8rem;
         color: grey;
-        margin-top: 20px;
+        margin-top: 12px;
+        margin-bottom: 12px;
         padding-top: 10px;
 
 
@@ -108,7 +110,8 @@ footer {
     }
 
     .footer-nav {
-        flex-direction: column;
+        margin: 12px;
+        flex-direction: row;
         gap: 10px;
         text-align: center;
     }
