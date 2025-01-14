@@ -25,6 +25,15 @@
       url("fonts/merienda-vf.ttf") format("truetype");
   }
 
+  
+  @font-face {
+    font-family: jost;
+    src:
+      url("fonts/jost-vf.woff2") format("woff2"),
+      url("fonts/jost-vf.woff") format("woff"),
+      url("fonts/jost-vf.ttf") format("truetype");
+  }
+
   :root {
     --divbgcolor: #bdaf95;
     --pagebgcolor: #f2f7fb;
@@ -32,11 +41,11 @@
     --gen-title-color: #0b64ad;
     --white: #fff;
     --border-radius: 0.75rem;
-    --gen-font-family: roboto, sans-serif;
+    --gen-font-family: jost, sans-serif;
     --bg-nav-bar: #f2f7fb;
     --svg-size: 25px;
     --title-font-size: 3rem;
-    --text-font-size: 1.2rem;
+    --text-font-size: 20px;
   }
 
   html {
@@ -50,7 +59,7 @@
     font-family: var(--gen-font-family);
     background-color: var(--pagebgcolor);
     color: var(--gen-letter-colorcolor);
-    font-weight: 400;
+    font-weight: 490;
     font-size: var(--text-font-size);
   }
 </style>
