@@ -4,10 +4,6 @@
 <div class="nav-bar">
     <img src="/img/isotipo-bg-plan-path.svg" alt="Isotipo PlanPath">
 
-    <button class="menu-toggle" aria-label="Abrir menú">
-        <img class="menu-svg" src="/img/burger-menu.svg" alt="">
-    </button>
-
     <nav>
         <ul>
             <li><a href="#benefits" class="nav-button">Inicio</a></li>
@@ -16,62 +12,70 @@
             <li><a href="#" class="nav-button nav-main-button">¡Planifica ya!</a></li>
         </ul>
     </nav>
+
+    <button class="menu-toggle" aria-label="Abrir menú">
+        <img class="menu-svg" src="/img/burger-menu.svg" alt="">
+    </button>
 </div>
 
 <style>
     .nav-bar{
         position: sticky;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
         background-color: var(--bg-nav-bar);
         color: var(--gen-title-color);
         width: 100%;
         text-align: center;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
         align-items: center;
         top: 0;
         opacity: 95%;
         z-index: 1;
         border-bottom: 0.2rem solid;
+        
+        img{
+            margin-left: 4rem;
+        }
 
             nav{
-            padding: 0.8rem;
+                padding: 0.8rem;
 
             ul{
-            list-style: none;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            gap: 1.4rem;
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                gap: 1.4rem;
             }
 
             .nav-button{
-            color: var(--gen-title-color);
-            padding: 1rem;
-            border: 0.15rem solid var(--bg-nav-bar);
-            text-decoration: none;
-            border-radius: 12px;
+                color: var(--gen-title-color);
+                padding: 1rem;
+                border: 0.15rem solid var(--bg-nav-bar);
+                text-decoration: none;
+                border-radius: 12px;
 
-            &.nav-main-button{
-            background-color: var(--gen-title-color);
-            color: var(--white);
-            border: 0.15rem solid var(--gen-title-color);
-            }
-            }
+                &.nav-main-button{
+                background-color: var(--gen-title-color);
+                color: var(--white);
+                border: 0.15rem solid var(--gen-title-color);
+                }
+                }
 
-            .nav-button:hover{
-            background-color: var(--gen-title-color);
-            color: var(--white);
-            border: 0.15rem solid var(--gen-title-color);
-            border-radius: 12px ;
+                .nav-button:hover{
+                background-color: var(--gen-title-color);
+                color: var(--white);
+                border: 0.15rem solid var(--gen-title-color);
+                border-radius: 12px ;
 
-            &.nav-main-button{
-            background-color: var(--div-letter-color);
-            color: var(--gen-title-color);
-            border: 0.15rem solid var(--gen-title-color);
-            border-radius: 12px ;
-            }
+                &.nav-main-button{
+                background-color: var(--div-letter-color);
+                color: var(--gen-title-color);
+                border: 0.15rem solid var(--gen-title-color);
+                border-radius: 12px ;
+                }
         }
     }
     .menu-svg{
@@ -106,8 +110,8 @@
 
     img,
     .menu-toggle {
-        margin-left: 5rem;
-        margin-right: 5rem;
+        margin-left: 4rem;
+        margin-right: 2rem;
 
     }
 
