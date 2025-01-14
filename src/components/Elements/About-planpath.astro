@@ -37,6 +37,7 @@ import contents from "../../data/content-data.json";
     .about-planpath .transparent-container :nth-child(2n) {
       & .pp-content-photos {
         border-radius: 12px 12px 0 0;
+
       }
 
       & .text-content {
@@ -54,14 +55,13 @@ import contents from "../../data/content-data.json";
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 5rem 0;
 
     & .transparent-container {
       display: flex;
       flex-direction: column;
       color: var(--gen-letter-color);
-      gap: 1rem;
-    }
+      gap: 32px;
+        }
   }
 
   .about-title {
@@ -73,6 +73,14 @@ import contents from "../../data/content-data.json";
     text-align: center;
   }
   @media (width <= 800px) {
+    .about-planpath {
+      padding: auto 2rem;
+
+      p{
+        text-align: center;
+        margin: 2rem;
+      }
+    }
     .transparent-container {
       padding: 25px;
     }

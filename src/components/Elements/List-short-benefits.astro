@@ -19,10 +19,19 @@ import benefits from "../../data/benefits-data.json";
   .benefits-content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 25px;
+    gap: 32px;
     width: 100%;
     border-radius: var(--border-radius);
     box-sizing: border-box;
-    padding: 25px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
   }
+
+  @media (width <= 800px) {
+    .benefits-content {
+      width: auto;
+    }
+  }
+
 </style>
