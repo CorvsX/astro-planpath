@@ -3,7 +3,7 @@ const { text, srcImg, altImg } = Astro.props;
 ---
 
 <div class="planpath-content">
-  <img class="pp-content-photos" src={srcImg} alt={altImg} />
+  <img loading="lazy" class="pp-content-photos" src={srcImg} alt={altImg} />
   <div class="text-content">
     <p>{text}</p>
   </div>

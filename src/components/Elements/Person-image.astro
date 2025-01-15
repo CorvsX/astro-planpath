@@ -5,7 +5,7 @@ const alt = `Foto de ${name}`;
 
 <div class="admin-card">
   <a href={url} target="_blank">
-    <img class="admin-photos" src={srcImg} alt={alt} />
+    <img loading="lazy" class="admin-photos" src={srcImg} alt={alt} />
     <div class="admin-overlay">
       <p class="admin-name">{name}</p>
       <p class="admin-slogan">{slogan}</p>

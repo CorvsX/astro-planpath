@@ -3,7 +3,7 @@ const { text, srcImg, altImg } = Astro.props;
 ---
 
 <div class="short-benefit">
-  <img class="sbenefit-photos" src={srcImg} alt={altImg} />
+  <img loading="lazy" class="sbenefit-photos" src={srcImg} alt={altImg} />
   <p class="short-benefit-text">{text}</p>
 </div>
 
