@@ -27,7 +27,7 @@ import persons from "../../data/persons.json";
         >Escuela de Organización Industrial (EOI)</a
       >. Este proyecto nació de nuestra pasión por la tecnología, la
       organización y el deseo de hacer más fácil y entretenida la experiencia de
-      planificar viajes.
+      planificar.
     </p>
   </div>
 </div>
@@ -90,9 +90,20 @@ import persons from "../../data/persons.json";
     }
   }
 
+  @media (width <= 800px) {
+
+    .text-container {
+      width: 80%;
+    }
+  }
+
   @media (width <= 480px) {
     .about-us {
       padding: 10px;
+    }
+
+    .text-container {
+      width: 70%;
     }
   }
 </style>
