@@ -16,7 +16,15 @@
   </body>
 </html>
 
-<style>
+<script>
+  import AOS from 'aos';
+  import 'aos/dist/aos.css'; // You can also use <link> for styles
+  // ..
+  AOS.init();
+</script>
+
+
+<style is:global>
   @font-face {
     font-family: merienda;
     font-display: swap;
@@ -63,5 +71,10 @@
     color: var(--gen-letter-colorcolor);
     font-weight: 450;
     font-size: var(--text-font-size);
+  }
+
+  body[data-aos-duration='10000'] [data-aos],
+  [data-aos][data-aos][data-aos-duration='10000'] {
+    transition-duration: 2000ms;
   }
 </style>

@@ -3,7 +3,7 @@ const { name, slogan, srcImg, url } = Astro.props;
 const alt = `Foto de ${name}`;
 ---
 
-<div class="admin-card">
+<div class="admin-card" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1000">
   <a href={url} target="_blank">
     <img loading="lazy" class="admin-photos" src={srcImg} alt={alt} />
     <div class="admin-overlay">

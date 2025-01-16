@@ -2,7 +2,7 @@
 
 PlanPath es una aplicación web que te ayuda a planificar tu próximo plan en tu ciudad divertida y eficiente.
 
-## 💻Demo
+## 💻 Demo
 
 Puedes ver la página en vivo [aquí](https://planpath.tech/)
 
@@ -67,7 +67,8 @@ Para más información sobre cómo trabajar con Astro, visita la documentación 
 - **Astro**: Framework para construir sitios web rápidos y modernos.
 - **eslint**: Herramienta para identificar y reportar patrones en el código JavaScript.
 - **prettier**: Formateador de código.
-- **astro-icon**: Integración de iconos para Astro.
+- [**astro-icon**](https://www.astroicon.dev): Integración de iconos para Astro.
+- **[aos](https://michalsnik.github.io/aos/)**: Libreria de Animaciones en Scroll
 
 ## 👥 Desarrolladores
 
