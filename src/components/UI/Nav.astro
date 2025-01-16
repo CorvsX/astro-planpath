@@ -3,14 +3,17 @@
 ---
 
 <div class="nav-bar">
-  <img src="/img/isotipo-bg-plan-path.svg" alt="Isotipo PlanPath" />
+
+  <a href="https://planpath.tech">
+    <img src="/img/isotipo-bg-plan-path.svg" alt="Isotipo PlanPath" />
+  </a>
 
   <nav>
     <ul>
-      <li><a href="#benefits" class="nav-button">Inicio</a></li>
-      <li><a href="#about-app" class="nav-button">Sobre la app</a></li>
-      <li><a href="#about-us" class="nav-button">Nosotros</a></li>
-      <li><a href="#" class="nav-button nav-main-button">¡Planifica ya!</a></li>
+      <li><a href="#" class="nav-button">Inicio</a></li>
+      <li><a href="#about-app" class="nav-button" data-scroll>Sobre la app</a></li>
+      <li><a href="#about-us" class="nav-button" data-scroll>Nosotros</a></li>
+      <li><a href="https://app.planpath.tech" class="nav-button nav-main-button">¡Planifica ya!</a></li>
     </ul>
   </nav>
 
@@ -163,6 +166,7 @@
     const navBar = document.querySelector(".nav-bar");
     const navLinks = document.querySelectorAll(".nav-button");
 
+
     document.addEventListener("DOMContentLoaded", () => {
       menuToggle.addEventListener("click", () => {
         navBar.classList.toggle("active");
@@ -173,8 +177,27 @@
           navBar.classList.remove("active");
         });
       });
+
+      const navHeight = navBar.offsetHeight;
+      const links = document.querySelectorAll('a[data-scroll]');
+
+      links.forEach(link => {
+      link.addEventListener('click', (event) => {
+        const targetId = link.getAttribute('href');
+        if (targetId.startsWith('#')) {
+          event.preventDefault();
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            const targetPosition = targetElement.getBoundingClientRect().top + window.scrollY - navHeight;
+            window.scrollTo({
+              top: targetPosition,
+              behavior: 'smooth'
+            });
+          }
+        }
+      });
+    });
     });
   }
-
   addAllEventListeners();
 </script>
