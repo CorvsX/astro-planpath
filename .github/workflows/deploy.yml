@@ -37,7 +37,6 @@ jobs:
         script: |
           cd /var/www/landing
           rm -rf *
-          mkdir -p dist
           exit
 
     - name: Upload Build Files
@@ -48,4 +47,4 @@ jobs:
         key: ${{ secrets.SERVER_PRIVATE_KEY }}
         port: 22
         source: dist/*
-        target: /var/www/tu_proyecto/
+        target: /var/www/landing
