@@ -37,7 +37,6 @@ jobs:
         script: |
           cd /var/www/landing
           rm -rf *
-          mkdir -p dist
           exit
 
     - name: Upload Build Files
