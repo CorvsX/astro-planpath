@@ -10,11 +10,12 @@ import contents from "../../data/content-data.json";
 
   <div class="transparent-container">
     {
-      contents.map((content) => (
+      contents.map((content, index) => (
         <PlanPathContent
           text={content.text}
           srcImg={content.srcImg}
           altImg={content.altImg}
+          index={index}
         />
       ))
     }

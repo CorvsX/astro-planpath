@@ -1,8 +1,9 @@
 ---
-const { text, srcImg, altImg } = Astro.props;
+const { text, srcImg, altImg, index } = Astro.props;
+const aosDirection = index % 2 === 0 ? 'fade-right' : 'fade-left';
 ---
 
-<div class="planpath-content">
+<div class="planpath-content" data-aos={aosDirection} data-aos-delay="250" data-aos-duration="1000">
   <img loading="lazy" class="pp-content-photos" src={srcImg} alt={altImg} />
   <div class="text-content">
     <p>{text}</p>
