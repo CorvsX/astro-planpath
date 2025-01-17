@@ -33,33 +33,41 @@ Dentro de tu proyecto Astro, verás las siguientes carpetas y archivos:
 Para instalar y ejecutar el proyecto localmente, sigue estos pasos:
 
 1. Clona el repositorio:
+
 ```sh
 git clone https://github.com/CorvsX/astro-planpath.git
 ```
 
 2. Navega al directorio del proyecto:
+
 ```sh
 cd planpath
 ```
 
 3. Instala las dependencias:
+
 ```sh
 npm install
 ```
 
 4. Inicia el servidor de desarrollo:
+
 ```sh
 npm run dev
 ```
 
 ## 📦 Despliegue
+
 Para construir el proyecto para producción, ejecuta:
+
 ```sh
 npm run build
 ```
+
 Los archivos construidos estarán en la carpeta dist.
 
 ## 📚 Documentación
+
 Para más información sobre cómo trabajar con Astro, visita la documentación oficial de Astro.
 
 ## 🛠️ Tecnologías y Librerías Usadas
@@ -77,7 +85,9 @@ Para más información sobre cómo trabajar con Astro, visita la documentación 
 - Jonathan - [GitHub](https://github.com/JonathanBetPer)
 
 ## 🤝 Contribuciones
+
 Las contribuciones son bienvenidas. Si deseas contribuir, por favor abre un issue o envía una pull request.
 
 ## 📄 Licencia
+
 Este proyecto está bajo la Licencia MIT. Consulta el archivo LICENSE para más detalles.
