@@ -18,6 +18,12 @@ importers:
         specifier: ^1.1.5
         version: 1.1.5
     devDependencies:
+<<<<<<< Updated upstream
+=======
+      '@types/aos':
+        specifier: ^3.0.7
+        version: 3.0.7
+>>>>>>> Stashed changes
       eslint:
         specifier: ^9.17.0
         version: 9.17.0
@@ -674,6 +680,12 @@ packages:
     resolution: {integrity: sha512-L7z9BgrNEcYyUYtF+HaEfiS5ebkh9jXqbszz7pC0hRBPaatV0XjSD3+eHrpqFemQfgwiFF0QPIarnIihIDn7OA==}
     engines: {node: '>=10.13.0'}
 
+<<<<<<< Updated upstream
+=======
+  '@types/aos@3.0.7':
+    resolution: {integrity: sha512-sEhyFqvKauUJZDbvAB3Pggynrq6g+2PS4XB3tmUr+mDL1gfDJnwslUC4QQ7/l8UD+LWpr3RxZVR/rHoZrLqZVg==}
+
+>>>>>>> Stashed changes
   '@types/cookie@0.6.0':
     resolution: {integrity: sha512-4Kh9a6B2bQciAhf7FSuMRRkUWecJgJu9nPnx3yzpsfXX/c50REIqpHY4C82bXP90qrLtXtkDxTZosYO3UpOwlA==}
 
@@ -2666,6 +2678,11 @@ snapshots:
 
   '@trysound/sax@0.2.0': {}
 
+<<<<<<< Updated upstream
+=======
+  '@types/aos@3.0.7': {}
+
+>>>>>>> Stashed changes
   '@types/cookie@0.6.0': {}
 
   '@types/debug@4.1.12':
